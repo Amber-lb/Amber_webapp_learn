@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* 登录页面头部 */
+.login ul {
+  height: 2.22222rem;
+  display: flex;
+  background-color: #db413a;
+  align-items: center;
+  padding: 0 0.51852rem 0 0.66667rem;
+  color: #fff;
+  font-size: 0.77037rem;
+}
+
+.login li:first-child a {
+  display: block;
+  width: 0.81481rem;
+  height: 0.81481rem;
+  background: url("../img/arrows.png") no-repeat center/cover;
+}
+
+.login li:first-child {
+  padding-right: 0.66667rem;
+  border-right: 0.01481rem solid #a8261d;
+}
+
+.login li:nth-child(2) {
+  flex-grow: 1;
+  padding-left: 0.66667rem;
+}
+
+.login li:last-child a {
+  color: #fff;
+  font-size: 0.68148rem;
+}
+
+/* 用户头像 */
+.user_pic {
+  margin: 1.06667rem auto 1.18519rem;
+  width: 2.96296rem;
+  height: 2.96296rem;
+  background: url("../img/avatar.png") no-repeat center/cover;
+  border: 0.11852rem solid #e6e8e7;
+  border-radius: 50%;
+}
+
+/* 美团账号登录 */
+.meituan_login {
+  font-size: 0.59259rem;
+  color: #999999;
+  padding-left: 0.66667rem;
+}
+
+/* 表单 */
+.user_input {
+  padding: 0 0.66667rem;
+  height: 4.47407rem;
+  background-color: #fff;
+  font-size: 0.68148rem;
+  margin: 0.53333rem 0 0.88889rem 0;
+  border-top: 0.01481rem solid #e4e4e4;
+  border-bottom: 0.01481rem solid #e4e4e4;
+}
+
+.user_input div {
+  height: 2.22222rem;
+  line-height: 2.22222rem;
+  display: flex;
+}
+
+.user_input input {
+  flex-grow: 1;
+}
+
+/* 按钮组 */
+.submit {
+  display: flex;
+  padding: 0 0.66667rem 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.submit button {
+  width: 14.66667rem;
+  height: 2rem;
+  background-color: #f14140;
+  border-radius: 0.01481rem solid d2564c;
+  color: #fff;
+  font-size: 0.68148rem;
+}
+
+.submit a {
+  height: 2.07407rem;
+  line-height: 2.07407rem;
+  font-size: 0.56296rem;
+  color: #fd4a37;
+  font-weight: 700;
+}
+
+/* 底部第三方账号登录 */
+footer {
+  padding: 0.74074rem 1.11111rem 0;
+}
+
+footer p {
+  font-size: 0.65185rem;
+  color: #959595;
+}
+
+footer p::before,
+footer p::after {
+  content: "";
+  display: inline-block;
+  width: 4.14815rem;
+  border: 0.05926rem dotted #959595;
+  margin-bottom: 0.17778rem;
+}
+
+footer p::before {
+  margin-right: 0.2963rem;
+}
+
+footer p::after {
+  margin-left: 0.2963rem;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  height: 5.62963rem;
+  text-align: center;
+}
+
+footer ul li {
+  flex-grow: 1;
+  padding-top: 0.74074rem;
+}
+
+footer ul li img {
+  width: 1.80741rem;
+  height: 1.80741rem;
+}
+
+footer ul li span {
+  display: block;
+  color: #000;
+  font-size: 0.56296rem;
+}

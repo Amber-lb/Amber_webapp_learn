@@ -1,0 +1,134 @@
+// 这里书写我们的 scss 代码，之后编译为 css
+@import 'px2rem.scss';
+// 需要写上设计稿的尺寸
+$designWidth:1080;
+
+/* 登录页面头部 */
+.login ul {
+    height: px2rem(150);
+    display: flex;
+    background-color: #db413a;
+    align-items: center;
+    padding: 0 px2rem(35) 0 px2rem(45);
+    color: #fff;
+    font-size: px2rem(52);
+}
+.login li:first-child a {
+    display: block;
+    width: px2rem(55);
+    height: px2rem(55);
+    background: url('../img/arrows.png') no-repeat center/cover;
+}
+.login li:first-child {
+    padding-right: px2rem(45);
+    border-right: px2rem(1) solid #a8261d;
+}
+.login li:nth-child(2) {
+    flex-grow: 1;
+    padding-left: px2rem(45);
+}
+.login li:last-child a {
+    color: #fff;
+    font-size: px2rem(46);
+}
+
+/* 用户头像 */
+.user_pic {
+    margin: px2rem(72) auto px2rem(80);
+    width: px2rem(200);
+    height: px2rem(200);
+    background: url('../img/avatar.png') no-repeat center/cover;
+    border: px2rem(8) solid #e6e8e7;
+    border-radius: 50%;
+}
+
+/* 美团账号登录 */
+.meituan_login {
+    font-size: px2rem(40);
+    color: #999999;
+    padding-left: px2rem(45);
+}
+
+/* 表单 */
+.user_input {
+    padding: 0 px2rem(45);
+    height: px2rem(302);
+    background-color: #fff;
+    font-size: px2rem(46);
+    margin: px2rem(36) 0 px2rem(60) 0;
+    border-top: px2rem(1) solid #e4e4e4;
+    border-bottom: px2rem(1) solid #e4e4e4;
+}
+.user_input div {
+    height: px2rem(150);
+    line-height: px2rem(150);
+    display: flex;
+}
+.user_input input {
+    flex-grow: 1;
+}
+
+/* 按钮组 */
+.submit {
+    display: flex;
+    padding: 0 px2rem(45) 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.submit button {
+    width: px2rem(990);
+    height: px2rem(135);
+    background-color: #f14140;
+    border-radius: px2rem(1) solid d2564c;
+    color: #fff;
+    font-size: px2rem(46);
+}
+.submit a {
+    height: px2rem(140);
+    line-height: px2rem(140);
+    font-size: px2rem(38);
+    color: #fd4a37;
+    font-weight: 700;
+}
+
+/* 底部第三方账号登录 */
+footer {
+    padding: px2rem(50) px2rem(75) 0;
+}
+footer p {
+    font-size: px2rem(44);
+    color: #959595;
+}
+footer p::before,
+footer p::after {
+    content: "";
+    display: inline-block;
+    width: px2rem(280);
+    border: px2rem(4) dotted #959595;
+    margin-bottom: px2rem(12);
+}
+footer p::before {
+    margin-right: px2rem(20);
+}
+footer p::after {
+    margin-left: px2rem(20);
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    height: px2rem(380);
+    text-align: center;
+}
+footer ul li {
+    flex-grow: 1;
+    padding-top: px2rem(50);
+}
+footer ul li img{
+    width: px2rem(122);
+    height: px2rem(122);
+}
+footer ul li span {
+    display: block;
+    color: #000;
+    font-size: px2rem(38);
+}

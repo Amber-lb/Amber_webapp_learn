@@ -1,0 +1,129 @@
+/* 登录页面头部 */
+.login ul {
+    height: 1.5rem;
+    display: flex;
+    background-color: #db413a;
+    align-items: center;
+    padding: 0 .35rem 0 .45rem;
+    color: #fff;
+    font-size: .52rem;
+}
+.login li:first-child a {
+    display: block;
+    width: .55rem;
+    height: .55rem;
+    background: url('../img/arrows.png') no-repeat center/cover;
+}
+.login li:first-child {
+    padding-right: .45rem;
+    border-right: .01rem solid #a8261d;
+}
+.login li:nth-child(2) {
+    flex-grow: 1;
+    padding-left: .45rem;
+}
+.login li:last-child a {
+    color: #fff;
+    font-size: .46rem;
+}
+
+/* 用户头像 */
+.user_pic {
+    margin: .72rem auto .8rem;
+    width: 2rem;
+    height: 2rem;
+    background: url('../img/avatar.png') no-repeat center/cover;
+    border: .08rem solid #e6e8e7;
+    border-radius: 50%;
+}
+
+/* 美团账号登录 */
+.meituan_login {
+    font-size: .4rem;
+    color: #999999;
+    padding-left: .45rem;
+}
+
+/* 表单 */
+.user_input {
+    padding: 0 .45rem;
+    height: 3.02rem;
+    background-color: #fff;
+    font-size: .46rem;
+    margin: .36rem 0 .6rem 0;
+    border-top: .01rem solid #e4e4e4;
+    border-bottom: .01rem solid #e4e4e4;
+}
+.user_input div {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    display: flex;
+}
+.user_input input {
+    flex-grow: 1;
+}
+
+/* 按钮组 */
+.submit {
+    display: flex;
+    padding: 0 .45rem 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.submit button {
+    width: 9.9rem;
+    height: 1.35rem;
+    background-color: #f14140;
+    border-radius: .01rem solid d2564c;
+    color: #fff;
+    font-size: .46rem;
+}
+.submit a {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    font-size: .38rem;
+    color: #fd4a37;
+    font-weight: 700;
+}
+
+/* 底部第三方账号登录 */
+footer {
+    padding: .5rem .75rem 0;
+}
+footer p {
+    font-size: .44rem;
+    color: #959595;
+}
+footer p::before,
+footer p::after {
+    content: "";
+    display: inline-block;
+    width: 2.8rem;
+    border: .04rem dotted #959595;
+    margin-bottom: .12rem;
+}
+footer p::before {
+    margin-right: .2rem;
+}
+footer p::after {
+    margin-left: .2rem;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    height: 3.8rem;
+    text-align: center;
+}
+footer ul li {
+    flex-grow: 1;
+    padding-top: .5rem;
+}
+footer ul li img{
+    width: 1.22rem;
+    height: 1.22rem;
+}
+footer ul li span {
+    display: block;
+    color: #000;
+    font-size: .38rem;
+}
