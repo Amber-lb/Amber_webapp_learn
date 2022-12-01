@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        /* 所有设备、宽度必需大于700px、横屏，这三个条件同时满足才为true */
+        @media all and (min-width: 700px) and (orientation: portrait) {
+            div {
+                background-color: blue;
+            }
+        }
+        /* 屏幕尺寸要小于800px, 横屏，这两个只要有一个满足，整个条件就会满足*/
+        @media (max-width: 800px),(orientation: landscape) {
+            div {
+                background-color: pink;
+            }
+        }
+        /* 屏幕的尺寸大于800，这个条件才能成立 */
+        @media not all and (max-width: 800px) {
+            div {
+                background-color: blue;
+            }
+        }
+        /* 彩色的屏幕，宽度大于1000px，这两个条件同时满足，整体条件才满足 */
+        @media only screen and (min-width: 1000px) {
+            div {
+                background-color: grey;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
