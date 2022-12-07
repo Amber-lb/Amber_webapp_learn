@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./transform.js"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #wrap{
+            height: 100vh;
+            overflow: hidden;
+            border: 5px solid #f00;
+            box-sizing: border-box;
+        }
+        #list{
+            transition: 0.3s;
+        }
+        #list li{
+            font-size: 24px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="list">
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表10</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表1</a></li>
+            <li><a href="#">这是一个很长很长的列表20</a></li>
+        </ul>
+    </div>
+    <script>
+        var wrap = document.querySelector('#wrap')
+        var list = document.querySelector('#list')
+        var startPoint = 0
+        var initTop = 0 
+        Transform(list)
+        wrap.addEventListener('touchstart', e => {
+            startPoint = e.changedTouches[0].pageY
+            initTop = list.translateY
+        })
+        wrap.addEventListener('touchmove', e => {
+            var dis = e.changedTouches[0].pageY - startPoint
+            list.translateY = dis + initTop
+        })
+        document.addEventListener('touchstart', e => {
+            e.preventDefault()
+        }, { passive: false })
+    </script>
+</body>
+</html>

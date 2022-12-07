@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            background: green;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+        }
+
+        input {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com/">度娘</a><br>
+    <input type="text">
+    <p>这是一个段落</p>
+    <div class="container"></div>
+    <script>
+        // 解决事件穿透方式，阻止默认行为
+        var box = document.querySelector('.container');
+        box.addEventListener('touchstart', (ev) => {
+            box.style.display = 'none';
+            ev.preventDefault()
+        });
+        const p = document.querySelector('p');
+        p.addEventListener('click', () => {
+            alert('该段落被点击了');
+        });
+    </script>
+</body>
+</html>

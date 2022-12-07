@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'></div>
+    <script>
+        // 查看移动端事件
+        var box = document.querySelector('.container')
+        box.addEventListener('touchstart', e => {
+            console.log('手指按下')
+        })
+        box.addEventListener('touchmove', e => {
+            console.log('手指移动')
+        })
+        box.addEventListener('touchend', e => {
+            console.log('手指抬起')
+        })
+    </script>
+</body>
+</html>
